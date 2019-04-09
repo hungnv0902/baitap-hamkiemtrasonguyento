@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("Nhap so luong"));
+        let dpy = "So nguyen to dau tien "
+        let N = 2;
+        let i = 0;
+        if (N == 2) {
+            dpy = number + dpy + N;
+            N++;
+            i++;
+        }
+        function kiemtrasonguyento() {
+            for (let a = 2; a < N; a++) {
+                if (N % a == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+
+        while (i < number) {
+            if (kiemtrasonguyento()) {
+                i ++;
+                dpy = dpy + " " + N;
+
+
+            }
+            N ++;
+            a = 2;
+        }
+
+        alert(dpy);
+    </script>
+</body>
+</html>
